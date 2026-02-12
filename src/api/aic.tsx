@@ -102,7 +102,8 @@ export function createAICImageDataGenerator(
       if (Number.isFinite(pages) && pages > 0) {
         totalPages = pages;
         const normalizedSeed = Math.abs(seed % 1);
-        nextPage = Math.floor(normalizedSeed * pages) + 1
+        // Cap starting page to 1-25 so demo loads are more likely to hit cached responses
+        nextPage = Math.floor(normalizedSeed * Math.min(pages, 25)) + 1
       } else {
         totalPages = null;
         nextPage = 1;
