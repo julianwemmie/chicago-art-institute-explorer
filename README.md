@@ -1,5 +1,7 @@
 # Chicago Art Institute Explorer
 
+![Screenshot](screenshot.png)
+
 A React application for browsing the Art Institute of Chicago collection. The interface presents an infinite grid of artworks using data from the public API. Selecting a tile opens a modal with an enlarged image and additional details about the piece.
 
 ## Getting started
